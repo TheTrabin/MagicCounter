@@ -32,6 +32,9 @@ border: solid 1px black;
 justify-content: space-evenly;
 `;
 
+const Counter = styled.h1`
+color: green;
+`;
 //function
 
 function PlaySlot1() {
@@ -49,7 +52,7 @@ function PlaySlot1() {
           </Name>
         <Life>
           <h3>Life</h3>
-          <h1>{ps1Life}</h1>
+          <Counter>{ps1Life}</Counter>
           <Bone>
           <Button onClick = {() => setPs1Life(ps1Life - 1)}>-1</Button><Button onClick = {() => setPs1Life(ps1Life - 5)}>-5</Button>
           </Bone>
