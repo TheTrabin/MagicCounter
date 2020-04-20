@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components';
 import { Button } from 'reactstrap';
 import {FaPen} from 'react-icons/fa';
@@ -41,6 +40,7 @@ function PlaySlot2() {
   let [ps2name, setPs2Name] = useState('Second Player')
   const p2Name = e => {setPs2Name(prompt('Second Player Name'))}
 
+  const [ps2Life, setPs2Life ] = useState(20);
 
   //output of statements
     return (
@@ -51,12 +51,12 @@ function PlaySlot2() {
           </Name>
           <Life>
           <h3>Life</h3>
-          <p>counter</p>
+          <h1>{ps2Life}</h1>
           <Bone>
-          <Button>-5</Button><Button>-1</Button>
+          <Button onClick = {() => setPs2Life(ps2Life - 5)}>-5</Button><Button onClick = {() => setPs2Life(ps2Life - 1)}>-1</Button>
           </Bone>
           <Btwo>
-          <Button>+5</Button><Button>+1</Button>
+          <Button onClick = {() => setPs2Life(ps2Life + 5)}>+5</Button><Button onClick = {() => setPs2Life(ps2Life + 1)}>+1</Button>
           </Btwo>
           </Life>
         

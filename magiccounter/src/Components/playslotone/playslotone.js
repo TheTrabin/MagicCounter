@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components';
 import { Button } from 'reactstrap';
 import {FaPen} from 'react-icons/fa';
@@ -39,6 +38,8 @@ function PlaySlot1() {
 //nameing function state grab
   let [ps1name, setPs1Name] = useState('First Player')
   const p1Name = e => {setPs1Name(prompt('First Player Name'))}
+  //initial state for life
+  const [ps1Life, setPs1Life ] = useState(20);
 
     return (
       <PS1>
@@ -48,12 +49,12 @@ function PlaySlot1() {
           </Name>
         <Life>
           <h3>Life</h3>
-          <p>counter</p>
+          <h1>{ps1Life}</h1>
           <Bone>
-          <Button>-1</Button><Button>-5</Button>
+          <Button onClick = {() => setPs1Life(ps1Life - 1)}>-1</Button><Button onClick = {() => setPs1Life(ps1Life - 5)}>-5</Button>
           </Bone>
           <Btwo>
-          <Button>+1</Button><Button>+5</Button>
+          <Button onClick = {() => setPs1Life(ps1Life + 1)}>+1</Button><Button onClick = {() => setPs1Life(ps1Life + 5)}>+5</Button>
           </Btwo>
         </Life>
 
