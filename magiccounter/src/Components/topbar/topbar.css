@@ -1,0 +1,6 @@
+.top-header{
+    display: flex;
+  flex-direction: row;
+  width: 1200px;
+  justify-content: space-evenly;
+}

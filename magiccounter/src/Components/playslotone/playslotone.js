@@ -1,16 +1,15 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import styled from 'styled-components';
 import { Button } from 'reactstrap';
 import {FaPen} from 'react-icons/fa';
 
 //styles
-
-const PS2 = styled.div`
+const PS1 = styled.div`
 border: solid 3px gold;
 width: 300px;
 height: 300px;
-background: blue;
+background: limegreen;
 `;
 
 const Name = styled.div`
@@ -36,35 +35,32 @@ justify-content: space-evenly;
 
 //function
 
-function PlaySlot2() {
-//rename state holding.
-  let [ps2name, setPs2Name] = useState('Second Player')
-  const p2Name = e => {setPs2Name(prompt('Second Player Name'))}
+function PlaySlot1() {
+//nameing function state grab
+  let [ps1name, setPs1Name] = useState('First Player')
+  const p1Name = e => {setPs1Name(prompt('First Player Name'))}
 
-
-  //output of statements
     return (
-      <PS2>
+      <PS1>
         <Name>
-        <h2>{ps2name}</h2>
-        <Button onClick={p2Name}><FaPen /></Button>         
+          <h2>{ps1name}</h2>
+          <Button onClick={p1Name}><FaPen /></Button>         
           </Name>
-          <Life>
+        <Life>
           <h3>Life</h3>
           <p>counter</p>
           <Bone>
-          <Button>-5</Button><Button>-1</Button>
+          <Button>-1</Button><Button>-5</Button>
           </Bone>
           <Btwo>
-          <Button>+5</Button><Button>+1</Button>
+          <Button>+1</Button><Button>+5</Button>
           </Btwo>
-          </Life>
-        
-      </PS2>
+        </Life>
+
+      </PS1>
     );
   }
   
-//output
+  //output
 
-
-  export default PlaySlot2;
+  export default PlaySlot1;
